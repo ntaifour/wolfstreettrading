@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Wolf Street Trading</title>
+	<link rel="shortcut icon" type="img/png" href="assets/img/favicon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- link to the Bootstrap Library -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+	<!-- link to local style sheet-->
+	<link rel="stylesheet" type="text/css" href="assets/css/homeStyle.css">
+
+	<!-- <script src="assets/js/validation.js" type="text/javascript"></script> -->
+
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+	<!-- =========================== NAVBAR	=========================== -->
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>                        
+				</button>
+                <img class="logo-img" src="assets/img/wstLogo.png" width="40" height="40" ALT="align box" ALIGN=LEFT>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav">
+					<li><p id="navWrapper">Wolf Street Trading</p></li>
+					<li><a href="#home">About</a></li>
+					<li><a href="#enter">Enter</a></li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+					<li><a href="/createAccount"><span class="glyphicon glyphicon-registration-mark"></span> Register</a></li>
+				</ul>
+
+
+			</div>
+		</div>
+	</nav>
+
+
+	<!-- =========================== CAROUSEL	=========================== -->
+
+	<div id="home" id="myCarousel" class="carousel slide" data-ride="carousel">
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
+				<img src="assets/img/wallSt3.jpg" alt="Wall Street" width="1200" height="100" style="opacity: .7;">
+				<div class="carousel-caption hidden-xs">
+
+					<h1>WOLF STREET TRADING</h1>
+
+					<p>EARN OR BE OUTEARNED.</p>
+					
+					<br><br>
+					<p>Something will be written here about our app.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- =========================== ENTER APP	=========================== -->
+		
+	<div id="enter">
+		<div class="row">
+			<!-- Login Modal -->
+			<div class="col-sm-12 text-center">
+					<!-- <a class="btn btn-primary btn-lg" href="/login">Login</a>
+					<a class="btn btn-primary btn-lg" href="/createAccount">Register</a> -->
+					
+					<a href="#" class="btn btn-primary btn-lg" role="button" data-toggle="modal" data-target="#login-modal">Login</a>
+			</div>
+		</div>
+		
+		<!-- BEGIN # MODAL LOGIN -->
+		<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header" align="center">
+						<img class="img-circle" id="img_logo" src="assets/img/wstLogo.png">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+						</button>
+					</div>
+					
+					<!-- Begin # DIV Form -->
+					<div id="div-forms">
+					
+						<!-- Begin # Login Form -->
+						<form id="login-form">
+							<div class="modal-body">
+								<div id="div-login-msg">
+									<div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+									<span id="text-login-msg">Type your username and password.</span>
+								</div>
+								<input id="login_username" class="form-control" type="text" placeholder="Username" required>
+								<input id="login_password" class="form-control" type="password" placeholder="Password" required>
+								<div class="checkbox">
+									<label> 
+										<input type="checkbox"> Remember me
+									</label>
+								</div>
+							</div>
+							<div class="modal-footer">
+								<div>
+									<button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+								</div>
+								<div id="registerWrapper">
+									<button id="login_register_btn" type="button" class="btn btn-link">Register</button>
+								</div>
+							</div>
+						</form>
+						<!-- End # Login Form -->
+						
+						<!-- Begin | Register Form -->
+						<form id="register-form" style="display:none;">
+							<div class="modal-body">
+								<div id="div-register-msg">
+									<div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+									<span id="text-register-msg">Register an account.</span>
+								</div>
+								<input id="register_username" class="form-control" type="text" placeholder="Username" required>
+								<input id="register_password" class="form-control" type="password" placeholder="Password" required>
+							</div>
+							<div class="modal-footer">
+								<div>
+									<button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+								</div>
+								<div id="registerWrapper">
+									<button id="register_login_btn" type="button" class="btn btn-link">Log In</button>
+								</div>
+							</div>
+						</form>
+						<!-- End | Register Form -->
+						
+					</div>
+					<!-- End # DIV Form -->
+					
+				</div>
+			</div>
+		</div>
+		<!-- END # MODAL LOGIN -->
+	</div>
+
+	 <!-- =========================== FOOTER =========================== -->
+	 <footer class="myfooter">
+
+		<div class="container">
+		  <div class="row socialbox">
+		  </div>
+		</div>
+	  </footer>
+
+	<!-- =========================== SCROLL PAGE SCRIPT =========================== -->
+	<script>
+		$(document).ready(function () {
+			// Initialize Tooltip
+			$('[data-toggle="tooltip"]').tooltip();
+
+			// Add smooth scrolling to all links in navbar + footer link
+			$(".navbar a, footer a[href='#home']").on('click', function (event) {
+				if (this.hash !== "") {
+					event.preventDefault();
+					var hash = this.hash;
+					$('html, body').animate({
+						scrollTop: $(hash).offset().top
+					}, 900, function () {
+
+						window.location.hash = hash;
+					});
+				}
+			});
+		})
+
+		//-- =========================== login modal script =========================== --//
+		$(function() {
+    
+			var $formLogin = $('#login-form');
+			var $formLost = $('#lost-form');
+			var $formRegister = $('#register-form');
+			var $divForms = $('#div-forms');
+			var $modalAnimateTime = 300;
+			var $msgAnimateTime = 150;
+			var $msgShowTime = 2000;
+
+			$("form").submit(function () {
+				switch(this.id) {
+					case "login-form":
+						var $lg_username=$('#login_username').val();
+						var $lg_password=$('#login_password').val();
+						if ($lg_username == "ERROR") {
+							msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "error", "glyphicon-remove", "Login error");
+						} else {
+							msgChange($('#div-login-msg'), $('#icon-login-msg'), $('#text-login-msg'), "success", "glyphicon-ok", "Login OK");
+						}
+						return false;
+						break;
+					case "register-form":
+						var $rg_username=$('#register_username').val();
+						var $rg_password=$('#register_password').val();
+						if ($rg_username == "ERROR") {
+							msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "error", "glyphicon-remove", "Registration error");
+						} else {
+							msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "success", "glyphicon-ok", "Account registered");
+						}
+						return false;
+						break;
+					default:
+						return false;
+				}
+				return false;
+			});
+			
+			$('#login_register_btn').click( function () { modalAnimate($formLogin, $formRegister) });
+			$('#register_login_btn').click( function () { modalAnimate($formRegister, $formLogin); });
+			
+			function modalAnimate ($oldForm, $newForm) {
+				var $oldH = $oldForm.height();
+				var $newH = $newForm.height();
+				$divForms.css("height",$oldH);
+				$oldForm.fadeToggle($modalAnimateTime, function(){
+					$divForms.animate({height: $newH}, $modalAnimateTime, function(){
+						$newForm.fadeToggle($modalAnimateTime);
+					});
+				});
+			}
+			
+			function msgFade ($msgId, $msgText) {
+				$msgId.fadeOut($msgAnimateTime, function() {
+					$(this).text($msgText).fadeIn($msgAnimateTime);
+				});
+			}
+			
+			function msgChange($divTag, $iconTag, $textTag, $divClass, $iconClass, $msgText) {
+				var $msgOld = $divTag.text();
+				msgFade($textTag, $msgText);
+				$divTag.addClass($divClass);
+				$iconTag.removeClass("glyphicon-chevron-right");
+				$iconTag.addClass($iconClass + " " + $divClass);
+				setTimeout(function() {
+					msgFade($textTag, $msgOld);
+					$divTag.removeClass($divClass);
+					$iconTag.addClass("glyphicon-chevron-right");
+					$iconTag.removeClass($iconClass + " " + $divClass);
+				}, $msgShowTime);
+			}
+		});
+	</script>
+</body>
+
+</html>
